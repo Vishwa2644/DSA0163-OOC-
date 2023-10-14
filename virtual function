@@ -1,0 +1,47 @@
+#include<iostream>
+using namespace std;
+class person{
+	public:
+		char name[50];
+		
+
+		virtual void work(){
+		    	cout<<"enter the name: \n";
+	cin>>name;
+			cout<<name<<"my work is developer:\n";
+		}
+		
+};
+class employee:public person{
+	public:
+		char nam[50];
+	
+		void work(){
+		    cout<<"enter the name: \n";
+	        cin>>nam;
+			cout<<nam<<"i am an employee \n";
+		}
+};
+class manager:public person{
+	public:
+		char na[50];
+		
+		void work(){
+		    cout<<"enter the name:\n";
+		cin>>na;
+			cout<<"i am manager\n";
+		}
+		
+};
+int main(){
+	person *a,d;
+	employee b;
+	manager c;
+	a=&d;
+	a->work();
+	a=&b;
+	a->work();
+	a=&c;
+	a->work();
+	}
+	
